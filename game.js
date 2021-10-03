@@ -3,11 +3,12 @@ const optionButtonsElement = document.getElementById('option-buttons')
 
 let state = {}
 let globalhealth = 0;
-let r = 0;
+let globalresearch = 0;
 
 function startGame() {
     state = {}
     globalhealth =10;
+    globalresearch =0;
     showTextNode(1)
     
 }
@@ -46,10 +47,12 @@ function selectOption(option) {
      const nextTextNodeId = option.nextText
      console.log(globalhealth)
      globalhealth = globalhealth + option.heal
+     globalresearch = globalresearch + option.research
      if (nextTextNodeId <= 0) {
          return startGame()
      }
      console.log(globalhealth)
+     console.log(globalresearch)
      state = Object.assign(state, option.setState)
      showTextNode(nextTextNodeId)
 }
@@ -86,6 +89,7 @@ const textNodes = [
             },
             {
                 text: 'Moon',
+                setState: {mot: true},
                 heal: 0,
                 nextText: 25
             },
@@ -520,7 +524,7 @@ const textNodes = [
                 text: 'Land on Far Side of The Moon',
                 heal : 0,
                 research: 0,
-                nextText: 3
+                nextText: 32
             }
         ]
     },
@@ -533,25 +537,226 @@ const textNodes = [
                 text: 'Explore',
                 heal: 0,
                 research: 1,
-                nextText: 3
+                nextText: 27
             },
             {
                 text: 'Conduct technical repair',
-                heal : 5,
+                heal : 1,
                 research: 0,
-                nextText: 3
+                nextText: 28
             },
             {
-                text: 'Explore Cave',
-                heal: 3,
-                research: 2,
-                nextText: 4
+                text: 'Analyse soil sample',
+                heal: 0,
+                research: 1,
+                nextText: 29
+            },
+        ]
+    },
+    {
+        id: 27,
+        text: 'You chose to explore! You are quite the adventurer arent you! Sadly, you roam for hours andhours but find nothing but barren land. All this walking has made u weak. You lose 10 hp.What will you do next?',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Analyse soil',
+                heal: 0,
+                research: 0,
+                nextText: 29
+            },
+            {
+                text: 'Return',
+                heal : 0,
+                research: 0,
+                nextText: 23
+            },
+            {
+                text: 'Repair',
+                heal: 5,
+                research: 1,
+                nextText: 28
+            }
+        ]
+    },
+    {
+        id: 28,
+        text: 'You like to play it safe! Very insightful. You check all the systems and …. OH MY GOD…there was shortcircuiting in the landing mechanism! You fix the issue… Phew! Crisis averted.What next?',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Explore',
+                heal: 0,
+                research: 1,
+                nextText: 27
+            },
+            {
+                text: 'Analyse soil',
+                heal : 0,
+                research: 1,
+                nextText: 29
             },
             {
                 text: 'Return',
                 heal: 0,
                 research: 0,
                 nextText: 23
+            }
+        ]
+    },
+    {
+        id: 29,
+        text: 'Of course! This was obvio the best choice! You can relax a bit too XD. You set up the samples to analyse them. Your findings shock you! The soil of Moon is made of 42% Oxygen?? Wow. Thats groundbreaking. Literally. What are you gonna do next??',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Try to make breathable O2 out of it',
+                heal: 0,
+                research: 1.5,
+                nextText: 30
+            },
+            {
+                text: 'Lets grow some potatoes cuz why not.',
+                heal : -5,
+                research: 5,
+                nextText: 3
+            }
+        ]
+    },
+    {
+        id: 30,
+        text: 'Now thats a real scientist. You try and try but you fail. Then as a final attempt, you use heat and electricity, and viola! You got oxygen now!! Yay!',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Explore',
+                heal: 0,
+                research: 0,
+                nextText: 27
+            },
+            {
+                text: 'Repair',
+                heal : 5,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Return',
+                heal: 0,
+                research: 0,
+                nextText: 23
+            }
+        ]
+    },
+    {
+        id: 31,
+        text: 'Ahh yes, who doesnt like potatoes. You set the soil up and and plant the seed. But only if you knew, all those efforts would be in vain.',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Explore',
+                heal: 0,
+                research: 1,
+                nextText: 27
+            },
+            {
+                text: 'Repair',
+                heal : 5,
+                research: 0,
+                nextText: 28
+            },
+            {
+                text: 'Return',
+                heal: 0,
+                research: 0,
+                nextText: 23
+            }
+        ]
+    },
+    {
+        id: 32,
+        text: 'You decide to land on the far side of the moon? ? A brave choice i must say. After a successful landing, you set up your safe pod with limited water and oxygen. Now what do you do?',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Explore',
+                heal: 0,
+                research: 0,
+                nextText: 33
+            },
+            {
+                text: 'Conduct Repair',
+                heal : 1,
+                research: 0,
+                nextText: 28
+            },
+            {
+                text: 'Analyze Soil',
+                heal: 0,
+                research: 1,
+                nextText: 29
+            }
+        ]
+    },
+    {
+        id: 33,
+        text: 'You chose to explore the dark side. What a brave savior. You walk for hours and suddenly, you see ice!! Congrats astronaut… you have found ice. This is an amazing find.Do you crave for more adventure or would you like to return.',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Bring on more adventure',
+                heal: 0,
+                research: 0,
+                nextText: 34
+            },
+            {
+                text: 'Lets go back',
+                heal : 5,
+                research: 0,
+                nextText: 35
+            }
+        ]
+    },
+    {
+        id: 34,
+        text: 'You chose adventure! You want to explore more but your team cries out that they are tired. Yet you continue and stumble upon a huge lunar crater! Inside the crater thereis a cave. "It looks suspicious", says one of your team members.Its your call chief!',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Explore cave',
+                heal: 0,
+                research: 0,
+                nextText: 100
+            },
+            {
+                text: 'Nah i am team player Lets go Home ',
+                heal : 0,
+                research: 0,
+                nextText: 3
+            }
+        ]
+    },
+    {
+        id: 35,
+        text: 'You return back to the base. What Next??',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Return',
+                heal: 0,
+                research: 0,
+                nextText: 23
+            },
+            {
+                text: 'Analyse soil',
+                heal : 0,
+                research: 1,
+                nextText: 29
+            },
+            {
+                text: 'Repair',
+                heal: 1,
+                research: 0,
+                nextText: 28
             }
         ]
     },
@@ -676,6 +881,126 @@ const textNodes = [
                 text: 'Mars',
                 requiredState: (currentState) => currentState.vetmetmot,
                 setState: { vetmetmot: false , vetmetmotmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.mot,
+                setState: { mot: false , motmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.mot,
+                setState: { mot: false , motvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.mot,
+                setState: { mot: false , motmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.motmat,
+                setState: { motmat: false , motmatvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.motmat,
+                setState: { motmat: false , motmatmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.motvet,
+                setState: { motvet: false , motvetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.motvet,
+                setState: { motvet: false , motvetmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.motmet,
+                setState: { motmet: false , motmetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.motmet,
+                setState: { motmet: false , motmetvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.motmatvet,
+                setState: { motmatvet: false , motmatvetmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.motmatmet,
+                setState: { motmatmet: false , motmatmetvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.motvetmat,
+                setState: { motvetmat: false , motvetmatmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.motvetmet,
+                setState: { motvetmet: false , motvetmetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.motmetmat,
+                setState: { motmetmat: false , motmetmatvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.motmetvet,
+                setState: { motmetvet: false , motmetvetmat: true},
                 heal: 0,
                 research: 0,
                 nextText: 1
