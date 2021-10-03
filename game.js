@@ -558,7 +558,7 @@ const textNodes = [
     {
         id: 99,
         text: 'Choose your next celestial body to explore.',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/4KTd00B/Landing.png')",
         options: [
             {
                 text: 'Mars',
