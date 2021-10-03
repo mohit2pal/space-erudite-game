@@ -27,6 +27,8 @@ function showTextNode(textNodeIndex) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
 
+    console.log(textNode.url)
+
     document.body.style.backgroundImage = textNode.url
 
     textNode.options.forEach(option => {
@@ -79,7 +81,7 @@ const textNodes = [
     {
         id: 2,
         text: 'Choose your first celestial body',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "image.png" ,
         options: [
             {
                text: 'Venus',
@@ -95,20 +97,22 @@ const textNodes = [
             },
             {
                 text: 'Mars',
+                setState: {mat: true},
                 heal: 0,
-                nextText: 3
+                nextText: 68
             },
             {
                 text: 'Mercury',
+                setState: {met: true},
                 heal: 0,
-                nextText: 3
+                nextText: 52
             }
         ]
     },
     {
        id: 3,
        text: 'Welcome to Venus. \n Where you want to land your spacecraft??',
-       url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+       url: "url('https://i.ibb.co/4KTd00B/Landing.png')",
         options: [
            {
             text: 'Move on Surface (mvs)',
@@ -125,7 +129,7 @@ const textNodes = [
     {
         id: 4,
         text: 'Conditions are tough here!!!....seems technical problem in spacecraft too… \n Do right decision',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/fMb4cm0/Above-55km.png')",
         options: [
             {
                text: 'Technical  check',
@@ -144,7 +148,7 @@ const textNodes = [
     {
         id: 5,
         text: 'Breathing is necessary for our life...Lets test the air..What say!!!!!',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/BjzJf3b/breathing.png')",
         options: [
             {
                text: 'Yes',
@@ -163,7 +167,7 @@ const textNodes = [
     {
         id: 6,
         text: 'Your presence of mind is great!!!..Choose what u want to do??',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/0Jm3sQG/Your-Presence.png')",
         options: [
             {
                text: 'Turn on automatic diffused gas reactor',
@@ -226,7 +230,7 @@ const textNodes = [
     {
         id: 9,
         text: 'Technical problem occured in spacecraft!!!.. \n What you will do now our saviour????',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/7j00pJj/Technical.png')",
         options: [
             {
                text: 'Solve Technical problem',
@@ -245,13 +249,13 @@ const textNodes = [
     {
         id: 10,
         text: 'Astronauts life is only for science.. \n Wanna prove it saviour????',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/gzwM19Y/Astronauts.png')",
         options: [
             {
                text: 'Explore More',
                heal: -1.5,
                research : 3,
-               nextText: 18
+               nextText: 11
             },
             {
                 text: 'Return',
@@ -263,8 +267,8 @@ const textNodes = [
     },
     {
         id: 11,
-        text: 'You proved it!!!..you love science and love science....Lets! move forward....',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        text: 'You proved it!!!..you live for science and love science....Lets! move forward....',
+        url: "url('https://i.ibb.co/gyWHV52/You-proved.png')",
         options: [
             {
                text: 'Move on Surface (mvs)',
@@ -283,7 +287,7 @@ const textNodes = [
     {
         id: 12,
         text: 'In a tough situation..Person should be predecided.. \n  What you are thinking our saviour??? ',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/n8N7xHj/In-Tough.png')",
         options: [
             {
                text: 'Return',
@@ -302,7 +306,7 @@ const textNodes = [
     {
         id: 13,
         text: ' Looks like Earth twin is exactly not like earth...air pressure is increasing \n Take decision quick and research fast....Or you may Die!!!!!',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/6BtXcFx/looks-like.png')",
         options: [
             {
                text: 'Explore Volcanic Area',
@@ -355,7 +359,7 @@ const textNodes = [
                nextText: 23
             },
             {
-                text: 'Research more!!!',
+                text: 'Research more!!! I Can Die for Science',
                 heal: -7,
                 research: +8.5,
                 nextText: 16
@@ -364,7 +368,7 @@ const textNodes = [
     },
     {
         id: 16,
-        text: 'I can die for Science',
+        text: 'You Have to move to next planet.',
         url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
@@ -512,7 +516,7 @@ const textNodes = [
     {
         id: 25,
         text: 'Houston : “The launch is successful.” About 102 hours later, It’s time to land. This is your first decision. What will you do?',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/zXFVxJy/Whats-App-Image-2021-10-03-at-10-03-50-AM.jpg')",
         options: [
             {
                 text: 'Land on Near side of the moon',
@@ -531,7 +535,7 @@ const textNodes = [
     {
         id: 26,
         text: 'You decide to land on the near side of the moon? \n A safe choice i must say \n After a successful landing, you set up your safe pod with limited water and oxygen. Now what do you do?',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/VDYzQ4L/Whats-App-Image-2021-10-03-at-10-04-39-AM.jpg')",
         options: [
             {
                 text: 'Explore',
@@ -556,7 +560,7 @@ const textNodes = [
     {
         id: 27,
         text: 'You chose to explore! You are quite the adventurer arent you! Sadly, you roam for hours andhours but find nothing but barren land. All this walking has made u weak. You lose 10 hp.What will you do next?',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/xmWMQ3Z/Whats-App-Image-2021-10-03-at-11-38-42-AM.jpg')",
         options: [
             {
                 text: 'Analyse soil',
@@ -581,7 +585,7 @@ const textNodes = [
     {
         id: 28,
         text: 'You like to play it safe! Very insightful. You check all the systems and …. OH MY GOD…there was shortcircuiting in the landing mechanism! You fix the issue… Phew! Crisis averted.What next?',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/ZL0H9jd/Whats-App-Image-2021-10-03-at-10-05-19-AM.jpg')",
         options: [
             {
                 text: 'Explore',
@@ -606,7 +610,7 @@ const textNodes = [
     {
         id: 29,
         text: 'Of course! This was obvio the best choice! You can relax a bit too XD. You set up the samples to analyse them. Your findings shock you! The soil of Moon is made of 42% Oxygen?? Wow. Thats groundbreaking. Literally. What are you gonna do next??',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wsCPWb0/Whats-App-Image-2021-10-03-at-10-05-44-AM.jpg')",
         options: [
             {
                 text: 'Try to make breathable O2 out of it',
@@ -618,14 +622,14 @@ const textNodes = [
                 text: 'Lets grow some potatoes cuz why not.',
                 heal : -5,
                 research: 5,
-                nextText: 3
+                nextText: 31
             }
         ]
     },
     {
         id: 30,
         text: 'Now thats a real scientist. You try and try but you fail. Then as a final attempt, you use heat and electricity, and viola! You got oxygen now!! Yay!',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/RpYJsbW/Whats-App-Image-2021-10-03-at-11-38-43-AM.jpg')",
         options: [
             {
                 text: 'Explore',
@@ -637,7 +641,7 @@ const textNodes = [
                 text: 'Repair',
                 heal : 5,
                 research: 0,
-                nextText: 3
+                nextText: 28
             },
             {
                 text: 'Return',
@@ -650,7 +654,7 @@ const textNodes = [
     {
         id: 31,
         text: 'Ahh yes, who doesnt like potatoes. You set the soil up and and plant the seed. But only if you knew, all those efforts would be in vain.',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/vQdvH5G/Whats-App-Image-2021-10-02-at-10-26-19-PM.jpg')",
         options: [
             {
                 text: 'Explore',
@@ -675,7 +679,7 @@ const textNodes = [
     {
         id: 32,
         text: 'You decide to land on the far side of the moon? ? A brave choice i must say. After a successful landing, you set up your safe pod with limited water and oxygen. Now what do you do?',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/VN3gDBS/Whats-App-Image-2021-10-03-at-10-04-21-AM.jpg')",
         options: [
             {
                 text: 'Explore',
@@ -699,8 +703,8 @@ const textNodes = [
     },
     {
         id: 33,
-        text: 'You chose to explore the dark side. What a brave savior. You walk for hours and suddenly, you see ice!! Congrats astronaut… you have found ice. This is an amazing find.Do you crave for more adventure or would you like to return.',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        text: 'You chose to explore the far side. What a brave savior. You walk for hours and suddenly, you see ice!! Congrats astronaut… you have found ice. This is an amazing find.Do you crave for more adventure or would you like to return.',
+        url: "url('https://i.ibb.co/w4qtZs6/Whats-App-Image-2021-10-03-at-10-08-30-AM.jpg')",
         options: [
             {
                 text: 'Bring on more adventure',
@@ -719,7 +723,7 @@ const textNodes = [
     {
         id: 34,
         text: 'You chose adventure! You want to explore more but your team cries out that they are tired. Yet you continue and stumble upon a huge lunar crater! Inside the crater thereis a cave. "It looks suspicious", says one of your team members.Its your call chief!',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/w4qtZs6/Whats-App-Image-2021-10-03-at-10-08-30-AM.jpg')",
         options: [
             {
                 text: 'Explore cave',
@@ -731,14 +735,14 @@ const textNodes = [
                 text: 'Nah i am team player Lets go Home ',
                 heal : 0,
                 research: 0,
-                nextText: 3
+                nextText: 35
             }
         ]
     },
     {
         id: 35,
         text: 'You return back to the base. What Next??',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/w4qtZs6/Whats-App-Image-2021-10-03-at-10-08-30-AM.jpg')",
         options: [
             {
                 text: 'Return',
@@ -761,6 +765,578 @@ const textNodes = [
         ]
     },
     {
+        id: 52,
+        text: 'Asteroid hit the space shuttle, \n Preparing for the crash land. \n Are you prepared for the crash landing? \n ',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes! Lets do this',
+                heal: -5,
+                nextText: 53,
+            },
+            {
+                text: 'No! Good bye beautiful world',
+                heal: 0,
+                nextText: 67,
+            }
+        ]
+        
+    },
+    {
+        id: 53,
+        text: 'Ahh! I am hurt \n ',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Analysie the surrounding',
+                heal: 0,
+                research: 0,
+                nextText: 54,
+            },
+            {
+                text: 'Will you use the med kit or embrace the pain? \n',
+                heal: 0,
+                nextText: 59,
+            },
+            {
+                text: 'Do you want to go for space shuttle \n',
+                heal: 0,
+                nextText:60,
+            },
+
+        ]
+    },
+    {
+        id: 54,
+        text: 'Do you want to analysie the surrounding \n ',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Ohh yes it will be fun to see new things',
+                heal: -5,
+                research: +10,
+                nextText: 55,
+            },
+            {
+                text: 'Naah! I am good, I am a lazy man \n',
+                heal: 10,
+                research: -5,
+                nextText: 56,
+            },        
+        ]
+    },
+    {
+        id: 55,
+        text: 'Do you wanna die or use the medkit? \n ',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes give me some anabolic',   // no link
+                heal: 5,
+                research:0,
+                nextText: 0,
+            },
+            {
+                text: 'Naah! I want to embrace the pain. \n',  // no link
+                heal: -5,
+                research:0,
+                nextText: 0,
+            },           
+        ]
+    },
+    {
+        id: 56,
+        text: 'Analyse the moon, \n How many moon does Mercury have? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: '0',
+                heal: 0,
+                research: 10,
+                nextText: 57,
+            },
+            {
+                text: '5 \n',
+                heal: 0,
+                research: 5,
+                nextText:58,
+            },          
+        ]
+    },
+    {
+        id: 57,
+        text: 'Ahh! I see you are a man of culture \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Go to another planet',
+                heal: 0,
+                research: 0,
+                nextText: 0,
+            },                    
+        ]
+    },
+    {
+        id: 58,
+        text: 'Arigatōgozaimashita now we know you have to gain more erudite about space.\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Go to another planet',
+                heal: 0,
+                research: 0,
+                nextText: 0,
+            },                    
+        ]
+    },
+    {
+        id: 59,
+        text: 'Wanna use medkit or embrace the pain?\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes i will us the med kit',   // health bar full
+                heal: 0,
+                research: 0,
+                nextText: 0,
+            }, 
+            {
+                text: 'No! I want to embrace the pain',   
+                heal: -5,
+                research: 0,
+                nextText: 0,
+            },  
+
+        ]
+    },
+    {
+        id: 60,
+        text: 'Are you going to repair the space shuttle?\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes I dont want to stay here for lifetime \n',   
+                heal: -10,
+                research: 15,
+                nextText: 0,
+            }, 
+            {
+                text: 'No! I’ll do that later coz. i am a procrastinator.',   
+                heal: 5,
+                research: -5,
+                nextText: 61,
+            },  
+
+        ]
+    },
+    {
+        id: 61,
+        text: 'Are you going to repair the space shuttle?\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes I dont want to stay here for lifetime \n',   
+                heal: -10,
+                research: 15,
+                nextText: 0,
+            }, 
+            {
+                text: 'No! I’ll do that later coz. i am a procrastinator.',   
+                heal: 5,
+                research: -5,
+                nextText: 62,
+            },  
+
+        ]
+    },
+    {
+        id: 62,
+        text: 'Do you want to analyse the surroundings or moon??\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Analysie the surrounding \n',   
+                heal: 0,
+                research: 0,
+                nextText: 63,
+            }, 
+            {
+                text: 'Analysie the moon.',   
+                heal: 0,
+                research: 0,
+                nextText: 64,
+            },  
+
+        ]
+    },
+    {
+        id: 63,
+        text: 'Do you really wanna analyse the surrounding?\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes lets check some new stuff \n',   
+                heal: 0,
+                research: 10,
+                nextText: 0,
+            }, 
+            {
+                text: 'Naah! I will rest ',   
+                heal: 5,
+                research: -5,
+                nextText: 0,
+            },  
+
+        ]
+    },
+    {
+        id: 64,
+        text: 'How many moon are there in mercury ?\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: '4 \n',   
+                heal: 0,
+                research: 0,
+                nextText: 58,
+            }, 
+            {
+                text: '0',   
+                heal: 0,
+                research: 10,
+                nextText: 65,
+            },
+            {
+                text: '5',   
+                heal: 5,
+                research: -5,
+                nextText: 66,
+            },   
+
+        ]
+    },
+    {
+        id: 65,
+        text: 'Absolutely correct!!\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Go to another planet \n',   
+                heal:0,
+                research: 10,
+                nextText:0,
+            },             
+        ]
+    },
+    {
+        id: 66,
+        text: 'Biro! get a life ?\n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Go to another planet!\n',   
+                heal: 0,
+                research: 5,
+                nextText: 0
+            },            
+        ]
+    },
+    {
+        id: 67,
+        text: 'Welcome to the hotel of karma! \n where there is no menu but you get what you deserve.',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: '------',   // what to do???
+                heal: 0,
+                research: 0,
+                nextText: 100
+            },            
+        ]
+    },
+    {
+        id: 68,
+        text: 'MARS STORY \n Wooosh the spaceship lands!! \n Will the Astronaut look for survival \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes!',
+                heal: 1,
+                research:1,
+                nextText: 72,
+            },
+            {
+                text: 'No! ',
+                heal: 0,
+                research: -2,
+                nextText: 69,
+            }
+        ]
+        
+    },
+    {
+        id: 69,
+        text: 'Aliens attack(Aliens live on mars kidoo!!) are you ready to fight?',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Escape',
+                heal: 2,
+                research:2,
+                nextText: 70, 
+            },
+            {
+                text: 'Don`t Escape ',
+                heal: 0,
+                research: 1,
+                nextText: 100, // dead 
+            }
+        ]
+        
+    },
+    {
+        id: 70,
+        text: 'How much is the day lenght diff btw mars and earth?? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: '30 Mins',
+                heal: -1,
+                research:0,
+                nextText: 99, 
+            },
+            {
+                text: '40 mins ',
+                heal: 1,
+                research: 1,
+                nextText: 71, 
+            },
+            {
+                text: '60 mins ',
+                heal: -1,
+                research: 0,
+                nextText: 99, 
+            },
+            {
+                text: '90 mins ',
+                heal: -1,
+                research: 0,
+                nextText: 99, 
+            }
+        ]
+        
+    },
+    {
+        id: 71,
+        text: 'Do you want to use med-kit? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes',
+                heal: 1,
+                research:0,
+                nextText: 23, // nxt planet
+            },
+            {
+                text: 'No ',
+                heal: -1,
+                research: 0,
+                nextText: 99, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 72,
+        text: 'Do You want to search for live sources? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes',
+                heal: 0,
+                research:1,
+                nextText: 73, 
+            },
+            {
+                text: 'No ',
+                heal: 0,
+                research: -1,
+                nextText: 99, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 73,
+        text: 'What do you wanna do? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Looks for live sources',
+                heal: 1,
+                research:0,
+                nextText: 74, 
+            },
+            {
+                text: 'Repair the space shuttle ',
+                heal: -1,
+                research: 0,
+                nextText: 99,   // dead
+            },  
+        ]     
+     
+    },
+    {
+        id: 74,
+        text: 'So is water available on mars? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Yes',
+                heal: 1,
+                research:2,
+                nextText: 75, 
+            },
+            {
+                text: 'No ',
+                heal: -1,
+                research: 1,
+                nextText: 80, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 75,
+        text: 'What do you wanna do? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'analyse the soil',
+                heal: 1,
+                research:0,
+                nextText: 76, 
+            },
+            {
+                text: 'look for living environment? ',
+                heal: -1,
+                research: 0,
+                nextText:79, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 76,
+        text: 'Can plants be grown on mars? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'yes',
+                heal: 1,
+                research: 2,
+                nextText: 77, 
+            },
+            {
+                text: 'No ',
+                heal: -1,
+                research: -1,
+                nextText: 99, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 77,
+        text: 'Congrats! you grew potatoes on mars,your health has increased  now \n Now what do you wanna do??',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Look for Air quality',
+                heal: 0,
+                research: 1,
+                nextText: 78, 
+            },
+            {
+                text: 'Look for living environment',
+                heal: 0,
+                research: 1,
+                nextText: 79, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 78,
+        text: 'Is the Martian air breathable to humans?? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'yes',
+                heal: 1,
+                research: 2,
+                nextText: 99, 
+            },
+            {
+                text: 'No ',
+                heal: -1,
+                research: 1,
+                nextText: 79, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 79,
+        text: 'Can Bacteria be grown on mars? \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'yes', 
+                heal: 1,
+                research: 2,
+                nextText: 80, 
+            },
+            {
+                text: 'No ',
+                heal: -1,
+                research: -1,
+                nextText: 99,  
+            },  
+        ]     
+     
+    },
+    {
+        id: 80,
+        text: 'Now you have two choices.. \n',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Repair the Spacecraft',
+                heal:-2,
+                research: 0,
+                nextText: 23, 
+            },
+            {
+                text: 'Escape ',
+                heal: 0,
+                research: 0,
+                nextText: 99, 
+            },  
+        ]     
+     
+    },
+    {
+        id: 98,
+        text: `Well you completed the game \n ${globalhealth} \n ${globalresearch}`,
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Thanks for playing',
+            }
+        ]
+    },
+    {
         id: 99,
         text: 'Choose your next celestial body to explore.',
         url: "url('https://i.ibb.co/4KTd00B/Landing.png')",
@@ -771,7 +1347,7 @@ const textNodes = [
                 setState: { vet: false , vetmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Moon',
@@ -787,7 +1363,7 @@ const textNodes = [
                 setState: { vet: false , vetmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Moon',
@@ -803,7 +1379,7 @@ const textNodes = [
                 setState: { vetmat: false , vetmatmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Mars',
@@ -811,7 +1387,7 @@ const textNodes = [
                 setState: { vetmot: false , vetmotmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Mercury',
@@ -819,7 +1395,7 @@ const textNodes = [
                 setState: { vetmot: false , vetmotmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Mars',
@@ -827,7 +1403,7 @@ const textNodes = [
                 setState: { vetmet: false , vetmetmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Moon',
@@ -851,7 +1427,7 @@ const textNodes = [
                 setState: { vetmatmot: false , vetmatmotmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Mercury',
@@ -859,7 +1435,7 @@ const textNodes = [
                 setState: { vetmotmat: false , vetmotmatmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Mars',
@@ -867,7 +1443,7 @@ const textNodes = [
                 setState: { vetmotmet: false , vetmotmetmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Moon',
@@ -883,7 +1459,7 @@ const textNodes = [
                 setState: { vetmetmot: false , vetmetmotmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Mars',
@@ -891,7 +1467,7 @@ const textNodes = [
                 setState: { mot: false , motmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Venus',
@@ -899,7 +1475,7 @@ const textNodes = [
                 setState: { mot: false , motvet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 3
             },
             {
                 text: 'Mercury',
@@ -907,7 +1483,7 @@ const textNodes = [
                 setState: { mot: false , motmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Venus',
@@ -915,7 +1491,7 @@ const textNodes = [
                 setState: { motmat: false , motmatvet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 3
             },
             {
                 text: 'Mercury',
@@ -923,7 +1499,7 @@ const textNodes = [
                 setState: { motmat: false , motmatmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Mars',
@@ -931,7 +1507,7 @@ const textNodes = [
                 setState: { motvet: false , motvetmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Mercury',
@@ -939,7 +1515,7 @@ const textNodes = [
                 setState: { motvet: false , motvetmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Mars',
@@ -947,7 +1523,7 @@ const textNodes = [
                 setState: { motmet: false , motmetmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Venus',
@@ -955,7 +1531,7 @@ const textNodes = [
                 setState: { motmet: false , motmetvet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 3
             },
             {
                 text: 'Mercury',
@@ -963,7 +1539,7 @@ const textNodes = [
                 setState: { motmatvet: false , motmatvetmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Venus',
@@ -971,7 +1547,7 @@ const textNodes = [
                 setState: { motmatmet: false , motmatmetvet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 3
             },
             {
                 text: 'Mercury',
@@ -979,7 +1555,7 @@ const textNodes = [
                 setState: { motvetmat: false , motvetmatmet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 52
             },
             {
                 text: 'Mars',
@@ -987,7 +1563,7 @@ const textNodes = [
                 setState: { motvetmet: false , motvetmetmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
             },
             {
                 text: 'Venus',
@@ -995,7 +1571,7 @@ const textNodes = [
                 setState: { motmetmat: false , motmetmatvet: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 3
             },
             {
                 text: 'Mars',
@@ -1003,14 +1579,260 @@ const textNodes = [
                 setState: { motmetvet: false , motmetvetmat: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 68
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.mat,
+                setState: { mat: false , matvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.mat,
+                setState: { mat: false , matmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.mat,
+                setState: { mat: false , matmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 52
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.matvet,
+                setState: { matvet: false , matvetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.matvet,
+                setState: { matvet: false , matvetmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 52
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.matmot,
+                setState: { matmot: false , matmotmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 52
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.matmot,
+                setState: { matmot: false , matmotvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.matmet,
+                setState: { matmet: false , matmetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.matmet,
+                setState: { matmet: false , matmetvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.matmetvet,
+                setState: { matmetvet: false , matmetvetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.matmetmot,
+                setState: { matmetmot: false , matmetmotvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.matmotvet,
+                setState: { matmotvet: false , matmotvetmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 52
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.matmotmet,
+                setState: { matmotmet: false , matmotmetvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.matvetmet,
+                setState: { matvetmet: false , matvetmetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.matvetmot,
+                setState: { matvetmot: false , matvetmotmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 52
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.met,
+                setState: { met: false , metvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.met,
+                setState: { met: false , metmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 68
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.met,
+                setState: { met: false , metmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.metvet,
+                setState: { metvet: false , metvetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 68
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.metvet,
+                setState: { metvet: false , metvetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.metmat,
+                setState: { metmat: false , metmatvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.metmat,
+                setState: { metmat: false , metmatmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.metmot,
+                setState: { metmot: false , metmotvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.metmot,
+                setState: { metmot: false , metmotmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 68
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.metmotmat,
+                setState: { metmotmat: false , metmotmatvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.metmotvet,
+                setState: { metmotvet: false , metmotvetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 68
+            },
+            {
+                text: 'Venus',
+                requiredState: (currentState) => currentState.metmatmot,
+                setState: { metmatmot: false , metmatmotvet: true},
+                heal: 0,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.metmatvet,
+                setState: { metmatvet: false , metmatvetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.metvetmot,
+                setState: { metvettmot: false , metvetmotmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 68
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.metvetmat,
+                setState: { metvettmat: false , metvettmatmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 25
+            },
+            {
+                text: 'I want to End the adventure',
+                heal: 0,
+                research: 0,
+                nextText: 98
             }
         ]
 
     },
     {
         id: 100,
-        text: 'DEAD',
+        text: 'Your health is depleted and you die',
         url: "url('https://english.cdn.zeenews.com/sites/default/files/2020/10/27/895471-water-moon-surface.jpg')",
         options: [
             {
