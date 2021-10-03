@@ -22,7 +22,13 @@ function showTextNode(textNodeIndex) {
     else {
         var textNode = textNodes.find(textNode => textNode.id === 100)
     }
+    if (textNode.id === 98)
+    {
+     textElement.innerHTML = `Thanks For Playing The Game \n Your Health Remmaining is ${globalhealth} \n Your Research Points is ${globalresearch}` 
+    }
+    else{
      textElement.innerText = textNode.text
+    }
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
@@ -68,11 +74,13 @@ const textNodes = [
             {
                 text: 'Yes,Ahoy!',
                 heal: 0,
+                research: 0,
                 nextText: 2
             },
             {
                 text: 'No! I am scared',
                 heal: 0,
+                research: 0,
                 nextText: 100
             }
         ]
@@ -87,24 +95,28 @@ const textNodes = [
                text: 'Venus',
                setState: {vet: true},
                heal: 0,
+               research: 0,
                nextText: 3
             },
             {
                 text: 'Moon',
                 setState: {mot: true},
                 heal: 0,
+                research: 0,
                 nextText: 25
             },
             {
                 text: 'Mars',
                 setState: {mat: true},
                 heal: 0,
+                research: 0,
                 nextText: 68
             },
             {
                 text: 'Mercury',
                 setState: {met: true},
                 heal: 0,
+                research: 0,
                 nextText: 52
             }
         ]
@@ -117,12 +129,14 @@ const textNodes = [
            {
             text: 'Move on Surface (mvs)',
             heal: -0.5,
+            research: 0,
             nextText: 13 
             },
             {
             text: 'Above 55km from surface',
              heal: -2,
-             nextText: 4
+             research: 0,
+             nextText: 4,
              },
         ]
     },
@@ -135,7 +149,7 @@ const textNodes = [
                text: 'Technical  check',
                heal: 0,
                research : +2.5,
-               nextText: 6
+               nextText: 6,
             },
             {
                 text: 'Start exploring',
@@ -767,7 +781,7 @@ const textNodes = [
     {
         id: 52,
         text: 'Asteroid hit the space shuttle, \n Preparing for the crash land. \n Are you prepared for the crash landing? \n ',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/6m4H17q/Mercury-has-the-most-craters-in-the-Solar-System.png')",
         options: [
             {
                 text: 'Yes! Lets do this',
@@ -785,7 +799,7 @@ const textNodes = [
     {
         id: 53,
         text: 'Ahh! I am hurt \n ',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/T0QyHtr/Mercury-has-some-extreme-temperature-changes.png')",
         options: [
             {
                 text: 'Analysie the surrounding',
@@ -809,7 +823,7 @@ const textNodes = [
     {
         id: 54,
         text: 'Do you want to analysie the surrounding \n ',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/6m4H17q/Mercury-has-the-most-craters-in-the-Solar-System.png')",
         options: [
             {
                 text: 'Ohh yes it will be fun to see new things',
@@ -828,26 +842,26 @@ const textNodes = [
     {
         id: 55,
         text: 'Do you wanna die or use the medkit? \n ',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/6m4H17q/Mercury-has-the-most-craters-in-the-Solar-System.png')",
         options: [
             {
                 text: 'Yes give me some anabolic',   // no link
                 heal: 5,
                 research:0,
-                nextText: 0,
+                nextText: 56,
             },
             {
                 text: 'Naah! I want to embrace the pain. \n',  // no link
                 heal: -5,
                 research:0,
-                nextText: 0,
+                nextText: 100,
             },           
         ]
     },
     {
         id: 56,
         text: 'Analyse the moon, \n How many moon does Mercury have? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/T0QyHtr/Mercury-has-some-extreme-temperature-changes.png')",
         options: [
             {
                 text: '0',
@@ -866,45 +880,45 @@ const textNodes = [
     {
         id: 57,
         text: 'Ahh! I see you are a man of culture \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/T0QyHtr/Mercury-has-some-extreme-temperature-changes.png')",
         options: [
             {
                 text: 'Go to another planet',
                 heal: 0,
                 research: 0,
-                nextText: 0,
+                nextText: 23,
             },                    
         ]
     },
     {
         id: 58,
         text: 'Arigatōgozaimashita now we know you have to gain more erudite about space.\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/6m4H17q/Mercury-has-the-most-craters-in-the-Solar-System.png')",
         options: [
             {
                 text: 'Go to another planet',
                 heal: 0,
                 research: 0,
-                nextText: 0,
+                nextText: 23,
             },                    
         ]
     },
     {
         id: 59,
         text: 'Wanna use medkit or embrace the pain?\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/T0QyHtr/Mercury-has-some-extreme-temperature-changes.pngg')",
         options: [
             {
                 text: 'Yes i will us the med kit',   // health bar full
                 heal: 0,
                 research: 0,
-                nextText: 0,
+                nextText: 60,
             }, 
             {
                 text: 'No! I want to embrace the pain',   
                 heal: -5,
                 research: 0,
-                nextText: 0,
+                nextText: 100,
             },  
 
         ]
@@ -918,7 +932,7 @@ const textNodes = [
                 text: 'Yes I dont want to stay here for lifetime \n',   
                 heal: -10,
                 research: 15,
-                nextText: 0,
+                nextText: 99,
             }, 
             {
                 text: 'No! I’ll do that later coz. i am a procrastinator.',   
@@ -932,13 +946,13 @@ const textNodes = [
     {
         id: 61,
         text: 'Are you going to repair the space shuttle?\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/T0QyHtr/Mercury-has-some-extreme-temperature-changes.png')",
         options: [
             {
                 text: 'Yes I dont want to stay here for lifetime \n',   
                 heal: -10,
                 research: 15,
-                nextText: 0,
+                nextText: 23,
             }, 
             {
                 text: 'No! I’ll do that later coz. i am a procrastinator.',   
@@ -972,19 +986,19 @@ const textNodes = [
     {
         id: 63,
         text: 'Do you really wanna analyse the surrounding?\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/T0QyHtr/Mercury-has-some-extreme-temperature-changes.png')",
         options: [
             {
                 text: 'Yes lets check some new stuff \n',   
                 heal: 0,
                 research: 10,
-                nextText: 0,
+                nextText: 64,
             }, 
             {
                 text: 'Naah! I will rest ',   
                 heal: 5,
                 research: -5,
-                nextText: 0,
+                nextText: 100,
             },  
 
         ]
@@ -992,7 +1006,7 @@ const textNodes = [
     {
         id: 64,
         text: 'How many moon are there in mercury ?\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/T0QyHtr/Mercury-has-some-extreme-temperature-changes.png')",
         options: [
             {
                 text: '4 \n',   
@@ -1018,13 +1032,13 @@ const textNodes = [
     {
         id: 65,
         text: 'Absolutely correct!!\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/6m4H17q/Mercury-has-the-most-craters-in-the-Solar-System.png')",
         options: [
             {
                 text: 'Go to another planet \n',   
                 heal:0,
                 research: 10,
-                nextText:0,
+                nextText:23,
             },             
         ]
     },
@@ -1037,27 +1051,28 @@ const textNodes = [
                 text: 'Go to another planet!\n',   
                 heal: 0,
                 research: 5,
-                nextText: 0
+                nextText: 99,
             },            
         ]
     },
     {
         id: 67,
         text: 'Welcome to the hotel of karma! \n where there is no menu but you get what you deserve.',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/6m4H17q/Mercury-has-the-most-craters-in-the-Solar-System.png')",
         options: [
             {
-                text: '------',   // what to do???
+                text: 'Click here',   
                 heal: 0,
                 research: 0,
-                nextText: 100
+                nextText: 100,
             },            
         ]
     },
+    // mars
     {
         id: 68,
         text: 'MARS STORY \n Wooosh the spaceship lands!! \n Will the Astronaut look for survival \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: 'Yes!',
@@ -1077,7 +1092,7 @@ const textNodes = [
     {
         id: 69,
         text: 'Aliens attack(Aliens live on mars kidoo!!) are you ready to fight?',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/ZXp6Scr/Whats-App-Image-2021-10-03-at-10-33-37-PM-1.jp')",
         options: [
             {
                 text: 'Escape',
@@ -1097,13 +1112,13 @@ const textNodes = [
     {
         id: 70,
         text: 'How much is the day lenght diff btw mars and earth?? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: '30 Mins',
                 heal: -1,
                 research:0,
-                nextText: 99, 
+                nextText: 100, 
             },
             {
                 text: '40 mins ',
@@ -1115,13 +1130,13 @@ const textNodes = [
                 text: '60 mins ',
                 heal: -1,
                 research: 0,
-                nextText: 99, 
+                nextText: 100, 
             },
             {
                 text: '90 mins ',
                 heal: -1,
                 research: 0,
-                nextText: 99, 
+                nextText:100, 
             }
         ]
         
@@ -1129,7 +1144,7 @@ const textNodes = [
     {
         id: 71,
         text: 'Do you want to use med-kit? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/ZXp6Scr/Whats-App-Image-2021-10-03-at-10-33-37-PM-1.jp')",
         options: [
             {
                 text: 'Yes',
@@ -1141,7 +1156,7 @@ const textNodes = [
                 text: 'No ',
                 heal: -1,
                 research: 0,
-                nextText: 99, 
+                nextText: 100, 
             },  
         ]     
      
@@ -1149,7 +1164,7 @@ const textNodes = [
     {
         id: 72,
         text: 'Do You want to search for live sources? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: 'Yes',
@@ -1161,7 +1176,7 @@ const textNodes = [
                 text: 'No ',
                 heal: 0,
                 research: -1,
-                nextText: 99, 
+                nextText: 100, 
             },  
         ]     
      
@@ -1169,7 +1184,7 @@ const textNodes = [
     {
         id: 73,
         text: 'What do you wanna do? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url(https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: 'Looks for live sources',
@@ -1181,7 +1196,7 @@ const textNodes = [
                 text: 'Repair the space shuttle ',
                 heal: -1,
                 research: 0,
-                nextText: 99,   // dead
+                nextText: 100,  
             },  
         ]     
      
@@ -1189,7 +1204,7 @@ const textNodes = [
     {
         id: 74,
         text: 'So is water available on mars? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: 'Yes',
@@ -1209,7 +1224,7 @@ const textNodes = [
     {
         id: 75,
         text: 'What do you wanna do? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/ZXp6Scr/Whats-App-Image-2021-10-03-at-10-33-37-PM-1.jp')",
         options: [
             {
                 text: 'analyse the soil',
@@ -1229,7 +1244,7 @@ const textNodes = [
     {
         id: 76,
         text: 'Can plants be grown on mars? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: 'yes',
@@ -1241,7 +1256,7 @@ const textNodes = [
                 text: 'No ',
                 heal: -1,
                 research: -1,
-                nextText: 99, 
+                nextText: 100, 
             },  
         ]     
      
@@ -1249,7 +1264,7 @@ const textNodes = [
     {
         id: 77,
         text: 'Congrats! you grew potatoes on mars,your health has increased  now \n Now what do you wanna do??',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/ZXp6Scr/Whats-App-Image-2021-10-03-at-10-33-37-PM-1.jp')",
         options: [
             {
                 text: 'Look for Air quality',
@@ -1269,13 +1284,13 @@ const textNodes = [
     {
         id: 78,
         text: 'Is the Martian air breathable to humans?? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: 'yes',
                 heal: 1,
                 research: 2,
-                nextText: 99, 
+                nextText: 100, 
             },
             {
                 text: 'No ',
@@ -1289,7 +1304,7 @@ const textNodes = [
     {
         id: 79,
         text: 'Can Bacteria be grown on mars? \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/ZXp6Scr/Whats-App-Image-2021-10-03-at-10-33-37-PM-1.jpg')",
         options: [
             {
                 text: 'yes', 
@@ -1301,7 +1316,7 @@ const textNodes = [
                 text: 'No ',
                 heal: -1,
                 research: -1,
-                nextText: 99,  
+                nextText: 100,  
             },  
         ]     
      
@@ -1309,7 +1324,7 @@ const textNodes = [
     {
         id: 80,
         text: 'Now you have two choices.. \n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/wMMk3sk/Whats-App-Image-2021-10-03-at-10-33-37-PM.jpg')",
         options: [
             {
                 text: 'Repair the Spacecraft',
@@ -1321,7 +1336,7 @@ const textNodes = [
                 text: 'Escape ',
                 heal: 0,
                 research: 0,
-                nextText: 99, 
+                nextText: 100, 
             },  
         ]     
      
