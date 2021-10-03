@@ -19,7 +19,7 @@ function showTextNode(textNodeIndex) {
      console.log(textNode)
     }
     else {
-        var textNode = textNodes.find(textNode => textNode.id === 20)
+        var textNode = textNodes.find(textNode => textNode.id === 100)
     }
      textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
@@ -68,7 +68,7 @@ const textNodes = [
             {
                 text: 'No! I am scared',
                 heal: 0,
-                nextText: 20
+                nextText: 100
             }
         ]
         
@@ -80,6 +80,7 @@ const textNodes = [
         options: [
             {
                text: 'Venus',
+               setState: {vet: true},
                heal: 0,
                nextText: 3
             },
@@ -162,7 +163,7 @@ const textNodes = [
         options: [
             {
                text: 'Turn on automatic diffused gas reactor',
-               heal: +2.5,
+               heal: 2.5,
                research : 0,
                nextText: 7
             },
@@ -208,7 +209,7 @@ const textNodes = [
                text: 'Return',
                heal: 0,
                research : 0,
-               nextText: 58
+               nextText: 23
             },
             {
                 text: 'Start exploring',
@@ -246,13 +247,13 @@ const textNodes = [
                text: 'Explore More',
                heal: -1.5,
                research : 3,
-               nextText: 11
+               nextText: 18
             },
             {
                 text: 'Return',
                 heal: 0,
                 research : 0,
-                nextText: 3
+                nextText: 23
             },
         ]
     },
@@ -271,7 +272,7 @@ const textNodes = [
                 text: 'Return',
                 heal: 0,
                 research : 0,
-                nextText: 3
+                nextText: 23
             },
         ]
     },
@@ -284,7 +285,7 @@ const textNodes = [
                text: 'Return',
                heal: 0,
                research : 0,
-               nextText: 3
+               nextText: 23
             },
             {
                 text: 'Move on Surface (mvs)',
@@ -303,25 +304,337 @@ const textNodes = [
                text: 'Explore Volcanic Area',
                heal: -5,
                research: 3.5,
-               nextText: 3
+               nextText: 14
             },
             {
                 text: 'Explore Plains',
                 heal: 0,
                 research: 1.5,
-                nextText: 3
+                nextText: 18
             },
             {
                 text: 'Analyze soil',
                 heal: 0,
                 research: 5,
-                nextText: 3
+                nextText: 19
             }
         ]
     },
-
+    {
+        id: 14,
+        text: ' Temperature is just unbearable!!..Are you missing your family \n Or want miss Humanity in future...........',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Lets! Explore more',
+               heal: 3,
+               research: 3,
+               nextText: 15
+            },
+            {
+                text: 'Comunicate to family',
+                heal: 2,
+                research: -2.5,
+                nextText: 17
+            }
+        ]
+    },
+    {
+        id: 15,
+        text: 'You are a saviour...your emotions is for Humanity..Remember this \n Every human is your family...Humans need your research \n Do you have strength to give humans more??????',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Return',
+               heal: 0,
+               research: 0,
+               nextText: 23
+            },
+            {
+                text: 'Research more!!!',
+                heal: -7,
+                research: +8.5,
+                nextText: 16
+            }
+        ]
+    },
+    {
+        id: 16,
+        text: 'I can die for Science',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Return',
+               heal: 0,
+               research: 0,
+               nextText: 23
+            }
+        ]
+    },
+    {
+        id: 17,
+        text: 'You are a emotional guy saviour!!!... \n Which step now??????????',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Return',
+               heal: 3,
+               research: 3,
+               nextText: 23
+            },
+            {
+                text: 'Lets Explore More',
+                heal: +3,
+                research: -2,
+                nextText: 15
+            }
+        ]
+    },
+    {
+        id: 18,
+        text: 'Our Research seems to be on right path...Lets save Humanity!!!',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Lets! Explore more',
+               heal: 3,
+               research: 3,
+               nextText: 15
+            },
+            {
+                text: 'search for water',
+                heal: 2,
+                research: -1.5,
+                nextText: 20
+            }
+        ]
+    },
+    {
+        id: 19,
+        text: 'Every single step matters a lot saviour....Lets save Humanity!!!!',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Try growing crops',
+               heal: 2.5,
+               research: -1,
+               nextText: 21
+            },
+            {
+                text: 'search for water',
+                heal: 2,
+                research: -1.5,
+                nextText: 20
+            }
+        ]
+    },
     {
         id: 20,
+        text: ' Humans chose the right person!!!...You analyzed your research \n correctly...Dont break humans believe....choose the next option!!!',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Lets! Explore more',
+               heal: 3,
+               research: 3,
+               nextText: 15
+            },
+            {
+                text: 'Comunicate to family',
+                heal: 2,
+                research: -2.5,
+                nextText: 17
+            },
+            {
+                text: 'Return',
+                heal: 0,
+                research: 0,
+                nextText: 23
+            }
+        ]
+    },
+    {
+        id: 21,
+        text: 'Read your research with care...You took lot time....In the mean time your spacecraft got damaged....decide quickly!!!!.',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Technical check',
+               heal: +1.5,
+               research: +1,
+               nextText: 22
+            },
+            {
+                text: ' Return ',
+                heal: 0,
+                research: 0,
+                nextText: 23
+            }
+        ]
+    },
+    {
+        id: 22,
+        text: 'Now we are ready to research more...If u feel afraid...then u have option to show it.....',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+               text: 'Lets! Explore more',
+               heal: 3,
+               research: 3,
+               nextText: 15
+            },
+            {
+                text: ' Return ',
+                heal: 0,
+                research: 0,
+                nextText: 23
+            }
+        ]
+    },
+    {
+        id: 23,
+        text: 'Lets GO to the next planet',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Lauch your space ship',
+                heal: 0,
+                research: 0,
+                nextText: 99
+
+            }
+        ]
+    },
+    {
+        id: 99,
+        text: 'Choose your next celestial body to explore.',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.vet,
+                setState: { vet: false , vetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.vet,
+                setState: { vet: false , vetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.vet,
+                setState: { vet: false , vetmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.vetmat,
+                setState: { vetmat: false , vetmatmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.vetmat,
+                setState: { vetmat: false , vetmatmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.vetmot,
+                setState: { vetmot: false , vetmotmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.vetmot,
+                setState: { vetmot: false , vetmotmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.vetmet,
+                setState: { vetmet: false , vetmetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.vetmet,
+                setState: { vetmet: false , vetmetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.vetmatmet,
+                setState: { vetmatmet: false , vetmatmetmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.vetmatmot,
+                setState: { vetmatmot: false , vetmatmotmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mercury',
+                requiredState: (currentState) => currentState.vetmotmat,
+                setState: { vetmotmat: false , vetmotmatmet: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.vetmotmet,
+                setState: { vetmotmet: false , vetmotmetmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Moon',
+                requiredState: (currentState) => currentState.vetmetmat,
+                setState: { vetmetmat: false , vetmetmatmot: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            },
+            {
+                text: 'Mars',
+                requiredState: (currentState) => currentState.vetmetmot,
+                setState: { vetmetmot: false , vetmetmotmat: true},
+                heal: 0,
+                research: 0,
+                nextText: 1
+            }
+        ]
+
+    },
+    {
+        id: 100,
         text: 'DEAD',
         url: "url('https://english.cdn.zeenews.com/sites/default/files/2020/10/27/895471-water-moon-surface.jpg')",
         options: [
