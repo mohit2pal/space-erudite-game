@@ -7,7 +7,7 @@ let r = 0;
 
 function startGame() {
     state = {}
-    globalhealth =3;
+    globalhealth =10;
     showTextNode(1)
     
 }
@@ -87,7 +87,7 @@ const textNodes = [
             {
                 text: 'Moon',
                 heal: 0,
-                nextText: 3
+                nextText: 25
             },
             {
                 text: 'Mars',
@@ -506,6 +506,56 @@ const textNodes = [
         ]
     },
     {
+        id: 25,
+        text: 'Houston : “The launch is successful.” About 102 hours later, It’s time to land. This is your first decision. What will you do?',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Land on Near side of the moon',
+                heal: 0,
+                research: 0,
+                nextText: 26
+            },
+            {
+                text: 'Land on Far Side of The Moon',
+                heal : 0,
+                research: 0,
+                nextText: 3
+            }
+        ]
+    },
+    {
+        id: 26,
+        text: 'You decide to land on the near side of the moon? \n A safe choice i must say \n After a successful landing, you set up your safe pod with limited water and oxygen. Now what do you do?',
+        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        options: [
+            {
+                text: 'Explore',
+                heal: 0,
+                research: 1,
+                nextText: 3
+            },
+            {
+                text: 'Conduct technical repair',
+                heal : 5,
+                research: 0,
+                nextText: 3
+            },
+            {
+                text: 'Explore Cave',
+                heal: 3,
+                research: 2,
+                nextText: 4
+            },
+            {
+                text: 'Return',
+                heal: 0,
+                research: 0,
+                nextText: 23
+            }
+        ]
+    },
+    {
         id: 99,
         text: 'Choose your next celestial body to explore.',
         url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
@@ -524,7 +574,7 @@ const textNodes = [
                 setState: { vet: false , vetmot: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 25
             },
             {
                 text: 'Mercury',
@@ -540,7 +590,7 @@ const textNodes = [
                 setState: { vetmat: false , vetmatmot: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 25
             },
             {
                 text: 'Mercury',
@@ -580,7 +630,7 @@ const textNodes = [
                 setState: { vetmet: false , vetmetmot: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 25
             },
             {
                 text: 'Moon',
@@ -588,7 +638,7 @@ const textNodes = [
                 setState: { vetmatmet: false , vetmatmetmot: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 25
             },
             {
                 text: 'Mercury',
@@ -620,7 +670,7 @@ const textNodes = [
                 setState: { vetmetmat: false , vetmetmatmot: true},
                 heal: 0,
                 research: 0,
-                nextText: 1
+                nextText: 25
             },
             {
                 text: 'Mars',
