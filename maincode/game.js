@@ -1,3 +1,5 @@
+/* The main code and backend of the game */
+
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 
@@ -69,7 +71,7 @@ const textNodes = [
     {
         id: 1,
         text: 'Instruction \n This is a story based game and your choices will will make a difference. \n Making right choices will continue the story while wrong choices will lead you to death! \n Based on your choices, you will gain or lose health and research points. \n You start off with 50 HP and 0 RP. \n ARE YOU READY TO FOR SPACE REALM?',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                 text: 'Yes,Ahoy!',
@@ -206,7 +208,7 @@ const textNodes = [
     {
         id: 7,
         text: 'Now your Aircraft is stable!!!..You are a smart astronaut...',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Start Exploring!',
@@ -225,7 +227,7 @@ const textNodes = [
     {
         id: 8,
         text: 'Damn!!!...Saviour now your fuel will finish  early \n Be attentive...otherwise you will not be able to sustain humanity....',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Return',
@@ -345,7 +347,7 @@ const textNodes = [
     {
         id: 14,
         text: ' Temperature is just unbearable!!..Are you missing your family \n Or want miss Humanity in future...........',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Lets! Explore more',
@@ -364,7 +366,7 @@ const textNodes = [
     {
         id: 15,
         text: 'You are a saviour...your emotions is for Humanity..Remember this \n Every human is your family...Humans need your research \n Do you have strength to give humans more??????',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Return',
@@ -383,7 +385,7 @@ const textNodes = [
     {
         id: 16,
         text: 'You Have to move to next planet.',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Return',
@@ -396,7 +398,7 @@ const textNodes = [
     {
         id: 17,
         text: 'You are a emotional guy saviour!!!... \n Which step now??????????',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Return',
@@ -415,7 +417,7 @@ const textNodes = [
     {
         id: 18,
         text: 'Our Research seems to be on right path...Lets save Humanity!!!',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Lets! Explore more',
@@ -434,7 +436,7 @@ const textNodes = [
     {
         id: 19,
         text: 'Every single step matters a lot saviour....Lets save Humanity!!!!',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Try growing crops',
@@ -453,7 +455,7 @@ const textNodes = [
     {
         id: 20,
         text: ' Humans chose the right person!!!...You analyzed your research \n correctly...Dont break humans believe....choose the next option!!!',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Lets! Explore more',
@@ -478,7 +480,7 @@ const textNodes = [
     {
         id: 21,
         text: 'Read your research with care...You took lot time....In the mean time your spacecraft got damaged....decide quickly!!!!.',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Technical check',
@@ -497,7 +499,7 @@ const textNodes = [
     {
         id: 22,
         text: 'Now we are ready to research more...If u feel afraid...then u have option to show it.....',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                text: 'Lets! Explore more',
@@ -516,7 +518,7 @@ const textNodes = [
     {
         id: 23,
         text: 'Lets GO to the next planet',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                 text: 'Lauch your space ship',
@@ -926,7 +928,7 @@ const textNodes = [
     {
         id: 60,
         text: 'Are you going to repair the space shuttle?\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                 text: 'Yes I dont want to stay here for lifetime \n',   
@@ -966,7 +968,7 @@ const textNodes = [
     {
         id: 62,
         text: 'Do you want to analyse the surroundings or moon??\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                 text: 'Analysie the surrounding \n',   
@@ -1045,7 +1047,7 @@ const textNodes = [
     {
         id: 66,
         text: 'Biro! get a life ?\n',
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                 text: 'Go to another planet!\n',   
@@ -1344,7 +1346,7 @@ const textNodes = [
     {
         id: 98,
         text: `Well you completed the game \n ${globalhealth} \n ${globalresearch}`,
-        url: "url('https://i.ibb.co/kMMJHQG/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
+        url: "url('https://i.ibb.co/Xt6jvx6/Whats-App-Image-2021-10-01-at-1-36-59-PM.jpg')",
         options: [
             {
                 text: 'Thanks for playing',
